@@ -1,158 +1,464 @@
 <section class="slide title" id="title" data-auto="title">
-  <aside class="notes">REPLACE: الترحيب، والتعريف بنفسك، وسؤال للقاعة يضبط الإيقاع، وإيقاع اليوم</aside>
+  <aside class="notes"><p>رحّب بالمشاركين، واطلب من كل واحد جملة: آخر قرار سياسات أو خدمة شارك فيه، وما الأداة التي استُعملت فيه. اليوم 1 عن الدولة حين تريد أن توجّه الذكاء الاصطناعي: بأي دور، وبأي أداة، ولمصلحة من.</p><p>في نهاية اليوم اختبار قصير مراقب مدته 50 دقيقة دون أي ذكاء اصطناعي، عن الأدوات ومفاهيم القيمة العامة. قل ذلك الآن.</p></aside>
 </section>
 
-<section class="slide" id="agenda" data-auto="agenda"></section>
+<section class="slide" id="agenda" data-auto="agenda">
+  <aside class="notes"><p>أربع جلسات من 75 دقيقة: نحو 40 دقيقة شرح ونقاش ونقطة تحقق، ثم مختبر 35 دقيقة. الاستراحات بمفتاح B. بعد الجلسة الرابعة الاختبار القصير المراقب.</p></aside>
+</section>
+
+<section class="slide" id="setup-check">
+  <div class="kicker">قبل أن نبدأ</div>
+  <h2>ما يجب أن يكون جاهزًا على جهازك</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>نسخة من مستودع المقرر، وجدول بيانات يفتح ملفات <span class="en">CSV</span></li>
+      <li><code>uv</code> مثبّت: يشغّل برنامجي الاختبار والحاسبة دون تثبيت آخر</li>
+      <li>من لديه حساب لدى مزود نماذج مستضافة: العنوان والمفتاح واسم نموذج، في متغيرات البيئة لا في الملفات</li>
+    </ul>
+    <pre class="code" data-file="الطرفية"><code>uv run labs/testing/run_tests.py a --recorded --no-save
+uv run labs/tools/value_case.py</code></pre>
+  </div>
+  <div class="callout tip mt"><b>علامة النجاح:</b> يطبع الأمر الأول سطر <code>decision by the course rule</code>، ويطبع الثاني جدول القيمة.</div>
+  <aside class="notes"><p>هذا من العمل التحضيري. من لم ينجح عنده الأمر يعمل اليوم دونه: مختبرات اليوم 1 جداول وملفات نصية، والبرنامجان يلزمان من اليوم 2. أصلح المشكلات في الاستراحة الأولى. الخطأ الأشهر: تشغيل الأمر من داخل مجلد <code>labs</code> لا من جذر المستودع.</p></aside>
+</section>
 
 <!-- الجلسة 1 -->
 
-<section class="slide section" id="s1" data-auto="section" data-session="1"></section>
-
-<section class="slide" id="s1-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
-  </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+<section class="slide section" id="s1" data-auto="section" data-session="1">
+  <aside class="notes"><p>نحو 40 دقيقة: الأدوار الخمسة (8)، والأمثلة (6)، والتعارض (8)، والضمانات (6)، ومشرف البيانات (5)، والمرجعيات (4)، ونقطة التحقق (3)؛ ثم المختبر 1.1.</p></aside>
 </section>
 
-<section class="slide" id="s1-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="five-roles" data-lo="LO1">
+  <div class="kicker">أدوار الدولة في الذكاء الاصطناعي</div>
+  <h2>الدولة لا توجّه الذكاء الاصطناعي بدور واحد، بل بخمسة</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>المنظِّم</h4><p class="small mb0">يضع قواعد على غيره ويراقبها: اشتراطات، وترخيص، واعتماد.</p></div>
+    <div class="card c-cyan"><h4>الممول</h4><p class="small mb0">يدفع ليحدث شيء: منح، وحوافز، وبرامج.</p></div>
+    <div class="card c-purple"><h4>المشتري</h4><p class="small mb0">يشتري لنفسه، فيشكّل السوق بما يطلبه.</p></div>
+    <div class="card c-amber"><h4>المشغِّل</h4><p class="small mb0">يقدّم الخدمة بنفسه، ويتحمل نتائجها أمام الناس.</p></div>
+    <div class="card c-coral"><h4>مشرف البيانات</h4><p class="small mb0">يقرر في البيانات التي تحت يده: ما يُنشر، وما يُشارَك، ومع من.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <aside class="notes"><p>اسأل القاعة: أي هذه الأدوار تمارسه جهتك اليوم؟ معظم الجهات تمارس ثلاثة أو أكثر دون أن تسميها. الفكرة التي تبقى: لكل دور أدوات مختلفة، وحين تجتمع الأدوار في جهة واحدة قد تتعارض.</p></aside>
+</section>
+
+<section class="slide" id="roles-in-practice" data-lo="LO1">
+  <div class="kicker">مثال موازٍ: بطاقة النقل الميسّر</div>
+  <h2>الخدمة نفسها تمر بالأدوار الخمسة</h2>
+  <table class="t small">
+    <tr><th>الدور</th><th>ما تفعله الوزارة في خدمة البطاقة</th></tr>
+    <tr><td>منظِّم</td><td>تشترط على مشغلي النقل قبول البطاقة وتدريب السائقين</td></tr>
+    <tr><td>ممول</td><td>تعوض المشغلين عن فرق الأجرة</td></tr>
+    <tr><td>مشترٍ</td><td>تشتري نظام إصدار البطاقات</td></tr>
+    <tr><td>مشغِّل</td><td>تستقبل الطلبات وتصدر البطاقات في مكاتبها</td></tr>
+    <tr><td>مشرف بيانات</td><td>تقرر ما تشاركه من بيانات الرحلات مع المشغلين</td></tr>
+  </table>
+  <aside class="notes"><p>المثال الموازي في كل شرائح المقرر هو خدمة ثالثة للوزارة، بطاقة النقل الميسّر، بأرقامها الخاصة. لا نعرض أرقام منحة تهيئة المسكن قبل أن تعمل عليها في المختبرات.</p></aside>
+</section>
+
+<section class="slide" id="judge-and-party" data-lo="LO1">
+  <div class="kicker">حين تجتمع الأدوار</div>
+  <h2>التعارض: أن تحكم الجهة على شيء هي طرف فيه</h2>
+  <div class="flow">
+    <div class="step c-amber"><b>تشغّل</b>مساعدًا في خدمتها</div>
+    <div class="arrow">←</div>
+    <div class="step c-teal"><b>تنظّم</b>مساعدات غيرها بالمعيار نفسه</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>تعتمد</b>نتائج اختبار النوعين</div>
+  </div>
+  <div class="callout warn mt"><b>أين يقع الخطأ:</b> أن تكون القاعدة على الجهات الأخرى أشد من القاعدة على مساعد الجهة نفسها، أو أن يعتمد نتائجَ مساعد الجهة من شغّله.</div>
+  <aside class="notes"><p>في المثال الموازي: لو كتبت الوزارة معيار تطبيقات النقل، وشغّلت هي تطبيقًا، واعتمدت نتائج اختبار التطبيقين، فمن يضمن أن تطبيقها خضع للمعيار نفسه؟ دع القاعة تجيب قبل أن تنتقل.</p></aside>
+</section>
+
+<section class="slide" id="three-safeguards" data-lo="LO1">
+  <div class="kicker">ثلاث ضمانات</div>
+  <h2>الفصل يزيل التعارض، والمراجعة المستقلة تضبطه، والإفصاح يكشفه</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>الفصل</h4><p class="small mb0">ينقل الفعل إلى وحدة أو جهة لا تملك الدور الآخر.</p></div>
+    <div class="card c-cyan"><h4>المراجعة المستقلة</h4><p class="small mb0">يبقى الفعل، ويراجعه من لا يتبع من أعدّه، وتُنشر نتيجته.</p></div>
+    <div class="card c-purple"><h4>الإفصاح</h4><p class="small mb0">يُنشر التعارض ليراه الناس. لا يغيّر النتيجة وحده.</p></div>
+  </div>
+  <div class="callout tip mt"><b>قاعدة عملية:</b> كلما كان القرار أقرب إلى حق فرد أو إلى ترخيص جهة، احتاج ضمانة أقوى من الإفصاح.</div>
+  <aside class="notes"><p>اربطها بفصل الصلاحيات الذي سيعود في اليوم 3: من يعدّ لا يعتمد، ومن يملك الخدمة لا يعتمد تقييم أثرها.</p></aside>
+</section>
+
+<section class="slide" id="data-steward" data-lo="LO1">
+  <div class="kicker">دور مشرف البيانات</div>
+  <h2>سياستا مشاركة البيانات والبيانات المفتوحة تحددان ما تستطيع الجهة أن تعطيه</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>سياسة مشاركة البيانات</h4><p class="small mb0">ثمانية مبادئ، منها: مشروعية الغرض، والاطلاع المصرّح به، والشفافية، والمسؤولية المشتركة، وأمن البيانات، والاستخدام الأخلاقي.</p></div>
+    <div class="card c-cyan"><h4>سياسة البيانات المفتوحة</h4><p class="small mb0">مبدؤها الأول «الأصل في البيانات الإتاحة»، ما لم تقتضِ طبيعتها عدم الإفصاح أو حماية خصوصيتها أو سريتها، وبصيغة مقروءة آليًا.</p></div>
+  </div>
+  <div class="callout note mt"><b>في المقرر:</b> نشر دليل الخدمة بلغتيه في صيغة مقروءة آليًا أداة سياسات رخيصة، تصل إلى كل من يبني مساعدًا.</div>
+  <aside class="notes"><p>المصدر: سياسة مشاركة البيانات وسياسة البيانات المفتوحة الصادرتان عن مكتب إدارة البيانات الوطنية (النسختان العربيتان على موقع سدايا). أسماء المبادئ كما في النص العربي. لا تقرأ القائمة كاملة: المهم أن المشاركة تحتاج غرضًا مشروعًا واطلاعًا مصرحًا به، وأن البيانات العامة الأصل فيها الإتاحة.</p></aside>
+</section>
+
+<section class="slide" id="national-frame" data-lo="LO1">
+  <div class="kicker">المرجعيات الوطنية في هذا المقرر</div>
+  <h2>كل مرجعية تخدم دورًا، وبعضها استرشادي لا ملزم</h2>
+  <table class="t small">
+    <tr><th>المرجعية</th><th>أين نستعملها</th></tr>
+    <tr><td>الاستراتيجية الوطنية للبيانات والذكاء الاصطناعي</td><td>الإطار الذي تعمل فيه أدوات الوزارة</td></tr>
+    <tr><td>مبادئ أخلاقيات الذكاء الاصطناعي</td><td>الإنصاف والشفافية والمساءلة في الحزمة</td></tr>
+    <tr><td>مبادئ الذكاء الاصطناعي التوليدي للجهات الحكومية</td><td>ما يُدخَل في الأدوات، وما يُقال للجمهور</td></tr>
+    <tr><td>الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي</td><td>تقييم الأثر في اليوم 3 (إطار استرشادي)</td></tr>
+    <tr><td>نظام المنافسات والمشتريات الحكومية</td><td>الجلسة 3 من اليوم</td></tr>
+  </table>
+  <aside class="notes"><p>الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي يصف نفسه بأنه إطار إرشادي للجهات الحكومية والخاصة. الاستراتيجية نذكرها بالاسم والعنوان فقط؛ لا ننسب إليها أرقامًا. العناوين في قسم المصادر من صفحة المقرر.</p></aside>
+</section>
+
+<section class="slide" id="check-roles" data-lo="LO1">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>أي ضمانة تعالج هذا التعارض؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO1">
+    <p class="lead">تشغّل الوزارة تطبيق بطاقة النقل الميسّر، وتكتب معيار التطبيقات الذي يلتزم به مشغلو النقل، ووحدة التطبيق نفسها تعتمد نتائج اختبار التطبيقات كلها. ما أنسب ضمانة؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يكشف التعارض للناس، لكن من يعتمد النتائج يبقى من شغّل التطبيق">نشر بيان بأن الوزارة تشغّل تطبيقًا وتكتب المعيار</div>
+      <div class="opt" data-ok>اعتماد النتائج من وحدة لا تتبع التشغيل، بمعيار واحد للجميع</div>
+      <div class="opt" data-why="يزيد ما يُختبر به تطبيق الوزارة، ولا يغيّر من يعتمد نتائجه">اختبار تطبيق الوزارة بعدد أكبر من الحالات قبل كل إصدار جديد</div>
+      <div class="opt" data-why="يعطي القاعدة الأشد لغير الوزارة، فيعمّق التعارض بدل أن يعالجه">إعفاء تطبيق الوزارة من المعيار لأنها جهة حكومية لها رقابتها</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> التعارض في من يعتمد النتائج؛ نقل الاعتماد إلى وحدة مستقلة وتطبيق المعيار نفسه يزيلانه.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: ب. ثلاث دقائق. من اختار الإفصاح: الإفصاح لا يغيّر من يقرر.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-1-1" data-auto="lab" data-lab="1.1">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>35 دقيقة، مساعد مرشد مسموح على الملفات العامة. تجوّل في الخطوة 3: من وجد التعارض الأول؟ لا تعطِ المفتاح قبل نهاية المختبر؛ المفتاح في قسم «للمدرّب» في صفحة المختبر، والمراجعة في أول الجلسة 2.</p></aside>
 </section>
 
 <!-- الجلسة 2 -->
 
-<section class="slide section" id="s2" data-auto="section" data-session="2"></section>
-
-<section class="slide" id="s2-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
-  </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+<section class="slide section" id="s2" data-auto="section" data-session="2">
+  <aside class="notes"><p>نحو 40 دقيقة: مراجعة المختبر 1.1 (5)، والأدوات الثماني (8)، والمعايير الثلاثة (6)، والبيئة التجريبية (5)، والمعيار والحوسبة (5)، والمثال الموازي (5)، وقوة الإلزام (3)، ونقطة التحقق (3)؛ ثم المختبر 1.2.</p></aside>
 </section>
 
-<section class="slide" id="s2-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="debrief-1-1" data-lo="LO1">
+  <div class="kicker">ما أظهره المختبر 1.1</div>
+  <h2>ثلاثة تعارضات: الحكم على ما تشغّله، وعلى من تموّله، وعلى ما تشتريه</h2>
+  <div class="cols cols-3">
+    <div class="card c-coral"><h4>A01 مع A02 وA03</h4><p class="small mb0">تشغّل «مُؤازِر» وتضع اشتراطات المساعدات وتعتمد نتائجها.</p></div>
+    <div class="card c-amber"><h4>A04 مع A05</h4><p class="small mb0">تموّل جهات أهلية ثم تقيّمها وتجدد تراخيصها.</p></div>
+    <div class="card c-purple"><h4>A06 مع A07</h4><p class="small mb0">تشتري المنصة وتكتب معيار قبولها.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <aside class="notes"><p>خمس دقائق. اطلب ضمانة واحدة لكل تعارض من القاعة. التعارض الثالث يعود في الجلسة 3: من يختبر قبل الاستلام. المشكلة في جهات كثيرة لا في مساعد الوزارة وحده؛ لذلك ننتقل إلى الأدوات التي تصل إليها.</p></aside>
+</section>
+
+<section class="slide" id="eight-instruments" data-lo="LO1">
+  <div class="kicker">أدوات السياسات</div>
+  <h2>ثماني أدوات تستطيع الحكومة أن توجّه بها الذكاء الاصطناعي</h2>
+  <div class="cols cols-4">
+    <div class="card c-teal"><h4>التنظيم</h4><p class="small mb0">قاعدة ملزمة لها جزاء</p></div>
+    <div class="card c-teal"><h4>الإرشادات</h4><p class="small mb0">ممارسة موصى بها</p></div>
+    <div class="card c-cyan"><h4>المعايير</h4><p class="small mb0">مواصفة قابلة للاختبار، وقد تُربط بشهادة</p></div>
+    <div class="card c-cyan"><h4>المشتريات</h4><p class="small mb0">ما تشترطه الحكومة حين تشتري</p></div>
+    <div class="card c-purple"><h4>التمويل</h4><p class="small mb0">مال بشروط</p></div>
+    <div class="card c-purple"><h4>البيئة التجريبية التنظيمية</h4><p class="small mb0">تجربة محدودة بإشراف</p></div>
+    <div class="card c-amber"><h4>مشاركة البيانات</h4><p class="small mb0">بيانات تتيحها الحكومة لغيرها</p></div>
+    <div class="card c-amber"><h4>الحوسبة المشتركة</h4><p class="small mb0">بنية تقدّمها الحكومة للجهات</p></div>
+  </div>
+  <aside class="notes"><p>كل أداة تغيّر سلوك جهة أخرى بطريقة مختلفة: بالإلزام، أو بالإقناع، أو بالمال، أو بالسوق، أو بالبيانات، أو بالبنية. اسأل: أي أداة استعملتها جهتك آخر مرة؟ وأيها لم تفكر فيها قط؟</p></aside>
+</section>
+
+<section class="slide" id="three-criteria" data-lo="LO1">
+  <div class="kicker">ثلاثة معايير للمقارنة</div>
+  <h2>نطاق التأثير والتكلفة والسرعة تقارن الأدوات، ولا تختار بينها</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>نطاق التأثير</h4><p class="small mb0">كم جهة يتغير سلوكها فعلًا، لا كم جهة تشملها الأداة على الورق.</p></div>
+    <div class="card c-cyan"><h4>التكلفة</h4><p class="small mb0">على الجهة في عمر الأداة: لمرة واحدة ثم كل سنة.</p></div>
+    <div class="card c-purple"><h4>السرعة</h4><p class="small mb0">الأشهر حتى أول أثر يُقاس، لا حتى الإعلان.</p></div>
+  </div>
+  <div class="callout warn mt"><b>أين يقع الخطأ:</b> درجة بلا رقم. «نطاقها واسع» رأي؛ «تصل إلى 30 من 40 مشغلًا» دليل.</div>
+  <aside class="notes"><p>في المختبر دليل تقدير بحدود رقمية لكل درجة: هو من وضع المقرر، لا معيار وطني. المهم أن تكون الحدود مكتوبة قبل التقدير، وأن يُكتب سبب كل درجة.</p></aside>
+</section>
+
+<section class="slide" id="sandbox" data-lo="LO1">
+  <div class="kicker">البيئة التجريبية التنظيمية <span class="en">(regulatory sandbox)</span></div>
+  <h2>تجربة محدودة بإشراف تعلّم المنظِّم ما يكتبه لاحقًا</h2>
+  <ul class="bullets">
+    <li>عدد قليل من الجهات، ومدة محددة، وإشراف لصيق، وشروط خروج</li>
+    <li>قيمتها في التعلم: ما الذي يخفق فعلًا، وما القاعدة التي تمنعه</li>
+    <li>نطاقها صغير بطبيعتها، فلا تُقدَّر كأنها تصل إلى السوق كلها</li>
+  </ul>
+  <div class="callout warn mt"><b>أين يقع الخطأ:</b> أن تُعلن البيئة التجريبية حلًا للقطاع، وهي لا تصل إلا إلى من دخلها.</div>
+  <aside class="notes"><p>الأمثلة على بيئات تجريبية بعينها تتغير كل دورة؛ لا نسمي برامج ولا أرقامًا من الذاكرة. اطرح سؤالًا: ما الذي تريد أن تتعلمه الوزارة من ست جهات قبل أن تكتب لائحة لمائتين وثمانين؟</p></aside>
+</section>
+
+<section class="slide" id="standards-compute" data-lo="LO1">
+  <div class="kicker">المعيار والحوسبة المشتركة</div>
+  <h2>المعيار يصل إلى من يحتاج رضا الجهة، والحوسبة المشتركة إلى من يستضيف عندها</h2>
+  <div class="cols cols-2">
+    <div class="card c-cyan"><h4>المعيار</h4><p class="small mb0">رخيص نسبيًا، ويصير شبه ملزم حين يُشترط لعقد أو تمويل أو ترخيص. يحتاج جهة تختبر عليه.</p></div>
+    <div class="card c-amber"><h4>الحوسبة المشتركة</h4><p class="small mb0">مكلفة وبطيئة، ونطاقها من يستضيف عليها. تحل مشكلة كلفة أو سيادة على البيانات، لا مشكلة جودة الإجابات.</p></div>
+  </div>
+  <div class="callout tip mt"><b>اسأل دائمًا:</b> ما المشكلة التي تحلها هذه الأداة تحديدًا؟ أداة ممتازة لمشكلة أخرى خيار سيئ.</div>
+  <aside class="notes"><p>مشكلة الوزارة في المختبر: دقة الإجابات والتصعيد والمساواة بين اللغتين. الحوسبة المشتركة لا تعالج أيًا منها مباشرة، وهذا ما يجب أن يظهر في الأسباب.</p></aside>
+</section>
+
+<section class="slide" id="parallel-scores" data-lo="LO1">
+  <div class="kicker">مثال موازٍ: 40 مشغّل نقل</div>
+  <h2>الدرجة تتبع الرقم، والسبب يذكره</h2>
+  <table class="t small">
+    <tr><th>الأداة</th><th>النطاق</th><th>التكلفة في 5 سنوات</th><th>السرعة</th></tr>
+    <tr><td>تنظيم ملزم</td><td>40 من 40 ← 5</td><td>800,000 ← 4</td><td>15 شهرًا ← 1</td></tr>
+    <tr><td>إرشادات</td><td>12 من 40 ← 3</td><td>200,000 ← 5</td><td>شهران ← 5</td></tr>
+    <tr><td>تمويل</td><td>6 من 40 ← 2</td><td>2,100,000 ← 3</td><td>5 أشهر ← 4</td></tr>
+  </table>
+  <p class="caption">أرقام اصطناعية من <code>labs/_tools/parallel_example.py</code>، بحدود دليل التقدير نفسه.</p>
+  <aside class="notes"><p>اقرأ سطر التنظيم: الأوسع نطاقًا والأبطأ. والإرشادات: الأسرع والأرخص ونطاقها 30% لأن الالتزام طوعي. المجموع هنا 10 و13 و9، والإرشادات «تفوز» بالمجموع. السؤال التالي: هل تكفي؟</p></aside>
+</section>
+
+<section class="slide" id="binding-mix" data-lo="LO1">
+  <div class="kicker">من الدرجات إلى القرار</div>
+  <h2>المجموع لا يرى قوة الإلزام، فالقرار مزيج يُكتب ما يفوته</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>أداة واسعة رخيصة</b>تصل إلى الجميع اليوم</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>أداة شرطية</b>تلزم من يطلب عقدًا أو تمويلًا</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>تنظيم لاحق</b>إن لم يكفِ ما سبق</div>
+  </div>
+  <div class="callout note mt"><b>في الموجز:</b> المزيج، وتكلفته، ومن لا يصل إليه، وكيف نعرف بعد سنة أنه نجح.</div>
+  <aside class="notes"><p>هذا ترتيب شائع لا قاعدة. أحيانًا يكون الخطر شديدًا فيبدأ التنظيم أولًا رغم بطئه. اطلب من القاعة مثالًا من عملها بدأ بالتنظيم مباشرة، ولماذا.</p></aside>
+</section>
+
+<section class="slide" id="check-instruments" data-lo="LO1">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>أي سبب يصلح لدرجة في جدول المقارنة؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO1">
+    <p class="lead">يكتب فريق سببًا لدرجة «نطاق التأثير» للتمويل في مثال مشغلي النقل. أي سبب يقبله دليل التقدير؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يصف الرغبة لا الوصول: الأداة الملزمة ليست بالضرورة الأوسع أثرًا في جدول يقيس من يتغير فعلًا">التمويل أداة قوية لأن المال يحرك الجهات</div>
+      <div class="opt" data-why="يقيس من يعلم بالأداة لا من يتغير سلوكه بها">أُعلن التمويل لكل المشغلين الأربعين</div>
+      <div class="opt" data-why="يخلط التكلفة بالنطاق: المبلغ معيار آخر في الجدول">ميزانية التمويل 2.1 مليون ريال في خمس سنوات</div>
+      <div class="opt" data-ok>تكفي الميزانية لستة مشغلين من 40 (15%)، فالدرجة 2</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> السبب يذكر عدد من يتغير فعلًا ونسبته، ويطبق حد الدليل عليه.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: د. ثلاث دقائق.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-1-2" data-auto="lab" data-lab="1.2">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>35 دقيقة. مساعد مرشد مسموح. تجوّل في الخطوة 4: كم خطأ وجد كل فريق في المسودة؟ نبّه من يختار بالمجموع وحده في الخطوة 5. المفتاح في صفحة المختبر.</p></aside>
 </section>
 
 <!-- الجلسة 3 -->
 
-<section class="slide section" id="s3" data-auto="section" data-session="3"></section>
-
-<section class="slide" id="s3-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
-  </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+<section class="slide section" id="s3" data-auto="section" data-session="3">
+  <aside class="notes"><p>نحو 40 دقيقة: مراجعة المختبر 1.2 (5)، والمشتري يشكّل السوق (5)، والنظامان (9)، وتكلفة دورة الحياة (7)، والاختبار المستقل (7)، والمحتوى المحلي (4)، ونقطة التحقق (3)؛ ثم المختبر 1.3.</p></aside>
 </section>
 
-<section class="slide" id="s3-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="debrief-1-2" data-lo="LO1">
+  <div class="kicker">ما أظهره المختبر 1.2</div>
+  <h2>أربعة أخطاء في المسودة، كلها درجة لا تتبع رقمها</h2>
+  <ul class="bullets">
+    <li>سرعة التنظيم 4، وهو يحتاج 18 شهرًا: الصحيح 1</li>
+    <li>تكلفة المشتريات 4، وتكلفتها 7.5 ملايين: الصحيح 1، فالسلم قُلب</li>
+    <li>نطاق البيئة التجريبية 4، وهي لست جهات من 283: الصحيح 1</li>
+    <li>نطاق الحوسبة المشتركة 3، وهي لخمس وعشرين جهة: الصحيح 1</li>
+  </ul>
+  <aside class="notes"><p>خمس دقائق. أعلى مجموع لمشاركة البيانات (14) ثم الإرشادات (13)، وكلتاهما غير ملزمة. اسأل عن المزيج الذي اختاره فريقان مختلفان، وما يفوت كلًا منهما. المشتريات الأقل درجة هنا، لكنها أداة الوزارة لمساعدها هي: موضوع هذه الجلسة.</p></aside>
+</section>
+
+<section class="slide" id="buyer-shapes-market" data-lo="LO1">
+  <div class="kicker">المشتريات أداةً</div>
+  <h2>ما تشترطه الحكومة حين تشتري يصير ما يبيعه السوق</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>كل شرط في الكراسة رسالة إلى المورِّدين: الاختبار باللغتين، والإشعار بالتغيير، والخروج</li>
+      <li>المشتري الحكومي الكبير يرفع الأرضية للجميع</li>
+      <li>لكن نطاقها من يبيع للحكومة، لا القطاع كله</li>
+    </ul>
+    <div class="card c-cyan"><h4>تفاصيل الشراء</h4><p class="small mb0">المتطلبات والعقود ومجموعة الاختبار المختومة في المقرر LDS-EXE-205. هنا: المشتريات أداة سياسات واحدة من ثماني.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <aside class="notes"><p>لا نعيد درس الشراء: من حضر LDS-EXE-205 يعرف بناء الكراسة. السؤال هنا أوسع: هل تكفي المشتريات لتوجيه السوق، أم تحتاج أداة أخرى معها؟</p></aside>
+</section>
+
+<section class="slide" id="two-laws" data-lo="LO1">
+  <div class="kicker">نظام المنافسات والمشتريات الحكومية</div>
+  <h2>النظام الجديد (1448هـ) منشور، والنافذ اليوم هو نظام (م/128)</h2>
+  <table class="t small">
+    <tr><th>ما في النظام الجديد</th><th>المادة</th></tr>
+    <tr><td>من أهدافه أفضل قيمة للمال العام بمراعاة تكلفة دورة الحياة وجودة التنفيذ وإدارة المخاطر</td><td>الثانية</td></tr>
+    <tr><td>لا تُذكر علامة تجارية ولا مواصفة لا تنطبق إلا على مورِّد بعينه</td><td>الثانية والعشرون</td></tr>
+    <tr><td>الشراء المباشر جائز لأغراض البحث أو التطوير أو الابتكار وفق ما تحدده اللائحة</td><td>الثانية والثلاثون</td></tr>
+    <tr><td>لائحة تفضيل تحدد آليات المحتوى المحلي</td><td>الثامنة والتسعون</td></tr>
+    <tr><td>يُعمل به بعد 120 يومًا من نشره، ويحل محل نظام (م/128)</td><td>المائة والأولى بعد المائة</td></tr>
+  </table>
+  <aside class="notes"><p>نُشر في جريدة أم القرى في 4 سبتمبر 2026، فتنقضي المدة نحو 2 يناير 2027 بحسابنا. حتى ذلك يبقى نظام (م/128) ولائحته نافذين. اللوائح التي يحيل إليها النظام الجديد لم نجدها منشورة عند كتابة المقرر (نوفمبر 2026). المصادر: جريدة أم القرى، نظام المنافسات والمشتريات الحكومية (1448هـ).</p></aside>
+</section>
+
+<section class="slide" id="lifecycle-cost" data-lo="LO1">
+  <div class="kicker">مثال موازٍ: تطبيق بطاقة النقل</div>
+  <h2>الأرخص في السنة الأولى قد يكون الأغلى على عمر الخدمة</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>الخيار P</h4><p class="small mb0">السنة الأولى 600,000 ريال. خمس سنوات مع الخروج 2,900,000.</p></div>
+    <div class="card c-teal"><h4>الخيار Q</h4><p class="small mb0">السنة الأولى 800,000 ريال. خمس سنوات مع الخروج 1,650,000.</p></div>
+  </div>
+  <div class="callout warn mt"><b>أين يقع الخطأ:</b> مقارنة العروض بميزانية سنة واحدة، ونسيان تكلفة الخروج حين ينتهي العقد.</div>
+  <aside class="notes"><p>الحساب: البناء + 5 × السنوية + الخروج. P: 0.1 + 2.5 + 0.3. Q: 0.6 + 1.0 + 0.05. الأرقام من <code>labs/_tools/parallel_example.py</code>. التسعير لكل استخدام يتراكم مع نمو الخدمة، وهذا ما تخفيه السنة الأولى.</p></aside>
+</section>
+
+<section class="slide" id="independent-testing" data-lo="LO1">
+  <div class="kicker">الاختبار المستقل</div>
+  <h2>يختبر قبل الاستلام من لا يبيع ولا يشتري</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>من</h4><p class="small mb0">لا المورِّد ولا فريق الشراء: وحدة أو طرف مستقل.</p></div>
+    <div class="card c-cyan"><h4>على ماذا</h4><p class="small mb0">حالات الجهة نفسها، باللغتين، مكتوبة قبل رؤية العروض.</p></div>
+    <div class="card c-purple"><h4>متى</h4><p class="small mb0">قبل الاستلام، وبعد كل إصدار جديد.</p></div>
+  </div>
+  <div class="callout note mt"><b>من أين القاعدة:</b> ممارسة تضعها الجهة في كراستها. لم نجد في نص النظام شرطًا للاختبار المستقل.</div>
+  <aside class="notes"><p>هذا يعالج التعارض الثالث من المختبر 1.1: المشتري الذي يكتب معيار قبول ما اشتراه. ميّز دائمًا بين ما يقوله النظام وما تقرره الجهة.</p></aside>
+</section>
+
+<section class="slide" id="local-content" data-lo="LO1">
+  <div class="kicker">المحتوى المحلي</div>
+  <h2>يُسجَّل في كل عرض، ويُحتسب بما تحدده لائحة التفضيل</h2>
+  <ul class="bullets">
+    <li>ينص النظام الجديد على لائحة تفضيل تحدد آليات المحتوى المحلي وطريقة احتسابه</li>
+    <li>في التقييم: تسجل اللجنة نسبة كل عرض ودليلها، وتطبق ما تحدده وثائق المنافسة</li>
+    <li>لا نضع في المقرر نسبة أفضلية: النص لم يحددها، ولم نقرأ اللائحة</li>
+  </ul>
+  <aside class="notes"><p>التنسيق مع هيئة المحتوى المحلي والمشتريات الحكومية عند التخطيط المسبق منصوص عليه في النظام. من يذكر نسبة أفضلية من الذاكرة: اسأله عن مصدرها.</p></aside>
+</section>
+
+<section class="slide" id="check-procurement" data-lo="LO1">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>ما الذي يقوله النظام فعلًا؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO1">
+    <p class="lead">يكتب زميل في مذكرة إلى الوكيلة أربع جمل عن نظام المنافسات والمشتريات الحكومية الجديد. أي جملة يسندها نص النظام؟</p>
+    <div class="opts">
+      <div class="opt" data-ok>من أهدافه أفضل قيمة للمال العام بمراعاة تكلفة دورة الحياة</div>
+      <div class="opt" data-why="يخلط ممارسة تضعها الجهة في كراستها بنص النظام">يشترط النظام اختبارًا مستقلًا لكل نظام ذكاء اصطناعي قبل الاستلام</div>
+      <div class="opt" data-why="يتجاهل أن النظام يُعمل به بعد 120 يومًا من نشره، وأن (م/128) نافذ حتى ذلك">هو النظام النافذ اليوم في المشتريات الحكومية منذ نشره في سبتمبر 2026</div>
+      <div class="opt" data-why="يضع رقمًا لم يرد في النظام، الذي يحيل الآليات إلى لائحة التفضيل">يحدد النظام نسبة أفضلية للمحتوى المحلي في التقييم الفني</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> تكلفة دورة الحياة مذكورة في أهداف النظام؛ الجمل الأخرى إما ممارسة أو تاريخ نفاذ خاطئ أو رقم من خارج النص.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: أ. ثلاث دقائق.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-1-3" data-auto="lab" data-lab="1.3">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>35 دقيقة. مساعد مرشد مسموح. في الخطوة 4 ارفض أي شرط يجعل المورِّد هو من يختبر. المفتاح في صفحة المختبر.</p></aside>
 </section>
 
 <!-- الجلسة 4 -->
 
-<section class="slide section" id="s4" data-auto="section" data-session="4"></section>
-
-<section class="slide" id="s4-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
-  </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+<section class="slide section" id="s4" data-auto="section" data-session="4">
+  <aside class="notes"><p>نحو 40 دقيقة: مراجعة المختبر 1.3 (4)، والقيمة العامة (7)، وفخ التبني (7)، ومن ينتفع (7)، والفئات الأربع (6)، ومقاييس النتائج (6)، ونقطة التحقق (3)؛ ثم المختبر 1.4، ثم الاختبار القصير المراقب.</p></aside>
 </section>
 
-<section class="slide" id="s4-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="debrief-1-3" data-lo="LO1">
+  <div class="kicker">ما أظهره المختبر 1.3</div>
+  <h2>X الأرخص في السنة الأولى والأغلى في خمس سنوات</h2>
+  <table class="t small">
+    <tr><th>الخيار</th><th class="num">السنة الأولى</th><th class="num">خمس سنوات مع الخروج</th></tr>
+    <tr><td>X</td><td class="num">1,800,000</td><td class="num">9,100,000</td></tr>
+    <tr class="hl"><td>Y</td><td class="num">1,850,000</td><td class="num">4,650,000</td></tr>
+    <tr><td>Z</td><td class="num">3,050,000</td><td class="num">4,950,000</td></tr>
+  </table>
+  <aside class="notes"><p>أربع دقائق. Y الأرخص على عمر الخدمة ويعرض الاختبار المستقل. نستعمل تكلفته في دراسة القيمة غدًا. اسأل: من كتب في شرطه أن المزود يختبر؟</p></aside>
+</section>
+
+<section class="slide" id="public-value" data-lo="LO2">
+  <div class="kicker">القيمة العامة <span class="en">(public value)</span></div>
+  <h2>القيمة العامة ما يتغير لحياة الناس، لا ما يربحه أحد</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>القيمة العامة</h4><p class="small mb0">كل المنافع والتكاليف والمخاطر التي تمس رفاه الناس، ومنها الإنصاف بين الفئات. تخص المجتمع كله لا الجهة ولا دافعي الرسوم وحدهم.</p></div>
+    <div class="card c-coral"><h4>العائد الخاص</h4><p class="small mb0">ما يعود على المورِّد أو على صورة الجهة: عقد، أو جائزة، أو ترتيب في مؤشر.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <aside class="notes"><p>الدليل الأخضر للخزانة البريطانية (طبعة 2026، الفقرة 2.5) يعرّف القيمة الاجتماعية بأنها كل المنافع والتكاليف والمخاطر التي تمس رفاه الناس، ومنها آثار التوزيع، ويقول إنها تسمى أحيانًا القيمة العامة. نستعمله مثالًا أجنبيًا يتجدد، لا مرجعًا ملزمًا. المصادر: HM Treasury, The Green Book (2026), 2.5.</p></aside>
+</section>
+
+<section class="slide" id="adoption-trap" data-lo="LO2">
+  <div class="kicker">فخ التبني</div>
+  <h2>عدد المستخدمين يقول إن الناس جربوا الأداة، لا إن حالهم تحسن</h2>
+  <div class="chat">
+    <div class="msg ai bad"><span class="who">تقرير تبنٍّ</span>نُزّل تطبيق بطاقة النقل 50 ألف مرة، والرضا 4.7 من 5.</div>
+    <div class="msg ai good"><span class="who">سؤال النتيجة</span>هل قلّ انتظار إصدار البطاقة؟ وهل زادت رحلات حامليها؟ ومن لم يصل إلى التطبيق أصلًا؟</div>
+  </div>
+  <div class="callout warn mt"><b>أين يقع الخطأ:</b> رضا مستخدمي الأداة وحدهم لا يرى من تركها ولا من لم يصل إليها.</div>
+  <aside class="notes"><p>الأرقام في المحادثة توضيحية للمثال الموازي، لا من بيانات الحالة. الفكرة: كل رقم تبنٍّ يجب أن نسأل خلفه عن نتيجة. سيظهر هذا في المختبر 1.4 وفي دراسة القيمة غدًا.</p></aside>
+</section>
+
+<section class="slide" id="who-benefits" data-lo="LO2">
+  <div class="kicker">التوزيع</div>
+  <h2>المتوسط قد يتحسن والفئة الأضعف لا تنتفع</h2>
+  <ul class="bullets">
+    <li>أداة على البوابة تنفع من يستعمل البوابة، وقد لا تصل إلى كبير السن على الهاتف</li>
+    <li>مساعد أضعف بالإنجليزية يعطي المقيم خدمة أقل من المواطن</li>
+    <li>تحليل التوزيع يسأل: من ينتفع، ومن يتحمل التكلفة أو الخطر</li>
+  </ul>
+  <div class="callout note mt"><b>بقدر الأثر:</b> أثر صغير يوصف، وأثر كبير يُحسب لكل فئة، وإذا كان الإنصاف هدفًا عُرض أثر كل فئة بوضوح.</div>
+  <aside class="notes"><p>الفقرات 7.1 إلى 7.3 من الدليل الأخضر: تحليل التوزيع يقيّم كيف تتوزع المنافع والتكاليف والمخاطر بين الفئات، والجهد فيه بقدر حجم آثار التوزيع. المصادر: HM Treasury, The Green Book (2026), 7.1 to 7.3.</p></aside>
+</section>
+
+<section class="slide" id="four-kinds" data-lo="LO2">
+  <div class="kicker">فرز المنافع</div>
+  <h2>أربعة أنواع تُكتب منفصلة، وخامس ليس منفعة</h2>
+  <div class="cols cols-4">
+    <div class="card c-teal"><h4>قيمة عامة</h4><p class="small mb0">نتيجة يعيشها الناس</p></div>
+    <div class="card c-coral"><h4>عائد خاص</h4><p class="small mb0">للمورِّد أو لصورة الجهة</p></div>
+    <div class="card c-purple"><h4>تبنٍّ</h4><p class="small mb0">استخدام لا نتيجة</p></div>
+    <div class="card c-amber"><h4>وفر مالي</h4><p class="small mb0">مال يخرج من الميزانية فعلًا</p></div>
+  </div>
+  <div class="callout warn mt"><b>والخامس:</b> خطر قُدّم على أنه منفعة، مثل «يتعلم المساعد من محادثات الناس».</div>
+  <aside class="notes"><p>الوقت الذي يتحرر من الموظفين ليس وفرًا ماليًا إلا إذا أُلغيت وظيفة أو عقد. إن أُعيد توجيهه إلى عمل آخر فهو قيمة، لا مال. هذا التمييز يعود غدًا في دراسة القيمة.</p></aside>
+</section>
+
+<section class="slide" id="outcome-measures" data-lo="LO2">
+  <div class="kicker">مقاييس النتائج</div>
+  <h2>مقياس النتيجة يُقاس من بيانات الخدمة، ولكل فئة</h2>
+  <table class="t small">
+    <tr><th>بدل مقياس الاستخدام</th><th>مقياس النتيجة في المثال الموازي</th></tr>
+    <tr><td>تنزيلات التطبيق</td><td>أيام الانتظار حتى إصدار البطاقة</td></tr>
+    <tr><td>عدد المحادثات</td><td>نسبة الطلبات التي تُعاد لنقص مستند</td></tr>
+    <tr><td>رضا مستخدمي المحادثة</td><td>شكاوى المعلومات الخاطئة لكل ألف تواصل، بكل لغة</td></tr>
+  </table>
+  <aside class="notes"><p>اطلب من القاعة مقياسًا رابعًا. قاعدة: إن كان المقياس يرتفع حين يستعمل الناس الأداة أكثر، ولو لم يتحسن شيء، فهو مقياس تبنٍّ.</p></aside>
+</section>
+
+<section class="slide" id="check-public-value" data-lo="LO2">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>أي هذه قيمة عامة؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO2">
+    <p class="lead">في مسودة تقرير عن مساعد بطاقة النقل الميسّر أربع منافع. أيها تُكتب في عمود القيمة العامة؟</p>
+    <div class="opts">
+      <div class="opt" data-why="رقم استخدام: يقول إن الناس جربوا الأداة، لا إن نتيجة تحسنت">بلغت المحادثات مع المساعد 30,000 محادثة في الربع الأول من السنة</div>
+      <div class="opt" data-why="عائد على صورة الجهة لا على حياة الناس">فازت الوزارة بجائزة إقليمية للخدمة الرقمية</div>
+      <div class="opt" data-ok>انخفضت الطلبات المعادة لنقص مستند لدى كبار السن على الهاتف</div>
+      <div class="opt" data-why="الوقت المحرر يُعاد توجيهه ولا يخرج من الميزانية، فليس قيمة عامة ولا وفرًا ماليًا بعد">تحرر لدى موظفي المكاتب 1,200 ساعة في السنة لأعمال أخرى</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> هي نتيجة يعيشها الناس، ومقيسة لفئة بعينها.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: ج. ثلاث دقائق. الساعات المحررة تُحسب في دراسة القيمة بقيمتها الاقتصادية، لكنها ليست نتيجة للمتقدم ولا مالًا يخرج من الميزانية.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-1-4" data-auto="lab" data-lab="1.4">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>35 دقيقة. مساعد مرشد مسموح. بعد المختبر استراحة قصيرة ثم الاختبار القصير المراقب. اجمع الأجهزة أو أغلق الأدوات قبل الاختبار.</p></aside>
+</section>
+
+<section class="slide dark" id="supervised-check">
+  <div class="kicker">التقييم · 10% من الدرجة</div>
+  <h1>الاختبار القصير المراقب · 50 د</h1>
+  <div class="timer" data-minutes="50"></div>
+  <p class="lead">دون أي ذكاء اصطناعي ودون أجهزة. عن أدوات السياسات ومفاهيم القيمة العامة.</p>
+  <aside class="notes"><p>ستون دقيقة في الجدول: تعليمات 5، والاختبار 50، والجمع 5. الأسئلة ومفتاحها عند المدرّب، ولا تُنشر في المستودع. اضغط T لتشغيل المؤقت.</p></aside>
 </section>
 
 <section class="slide" id="wrap-up">
   <div class="kicker">خلاصة اليوم 1</div>
-  <h2>ثلاثة أمور تبقى معك</h2>
-  <div class="cols cols-3">
-    <div class="card c-teal"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
-    <div class="card c-coral"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
-    <div class="card c-purple"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
-  </div>
+  <h2>ثلاثة أشياء تبقى معك</h2>
+  <ol class="bullets">
+    <li><b>سمِّ الدور قبل الأداة:</b> منظِّم أو ممول أو مشترٍ أو مشغِّل أو مشرف بيانات، وانتبه لتعارضها</li>
+    <li><b>لكل درجة رقم:</b> نطاق التأثير والتكلفة والسرعة تقارن الأدوات، والقرار يذكر الإلزام وما يفوته</li>
+    <li><b>القيمة العامة نتيجة يعيشها الناس:</b> لا عدد مستخدمين ولا جائزة</li>
+  </ol>
+  <aside class="notes"><p>اطلب من كل مشارك أن يكتب أداة واحدة يرى أن جهته أهملتها، وسببًا واحدًا.</p></aside>
 </section>
 
-<section class="slide dark" id="next" data-label="التالي">
-  <div class="kicker">التالي</div>
-  <h2>اليوم 2: REPLACE: موضوع هذه الوحدة في كلمات قليلة</h2>
-  <p class="lead">REPLACE: ما يجهزه المشاركون قبل ذلك، والمختبرات غير المكتملة يمكن إكمالها في المنزل</p>
-  <aside class="notes">REPLACE: الحسابات أو التثبيتات أو القراءة التي يحتاجها المشاركون قبل الوحدة التالية</aside>
+<section class="slide dark" id="next">
+  <div class="kicker">غدًا</div>
+  <h2>دراسة القيمة العامة، ثم اختبار المساعد باللغتين</h2>
+  <p class="lead">أحضر تصنيفك من المختبر 1.4 ونتائجك الثلاث، وتأكد أن <code>uv run labs/testing/run_tests.py a --recorded --no-save</code> يعمل على جهازك.</p>
+  <aside class="notes"><p>من لم يُنهِ المختبر 1.4 يبدأ غدًا من الملفات المقدمة: لا يعتمد أي مختبر في اليوم 2 على نتيجته.</p></aside>
 </section>
