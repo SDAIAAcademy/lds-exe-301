@@ -5,7 +5,7 @@ AI in Public Policy and Public Service Delivery
 
 مسار التنفيذيين والقادة · أكاديمية سدايا · LDS-EXE-301 · المستوى 300
 
-REPLACE: سطر واحد تحت العنوان: ما يستطيع المشارك فعله بعد المقرر
+يختار المسؤول أداة السياسات بنطاق تأثيرها وتكلفتها وسرعتها، ويبني لمساعد المواطنين دراسة قيمة عامة، ويختبره بالعربية والإنجليزية، ويجمع حزمة المساءلة التي يستحقها الجمهور، ثم يدافع عنها أمام لجنة وزارية
 
 يتدرب كبار موظفي القطاع العام على اختيار الأدوات التي تستخدمها الحكومة لتوجيه الذكاء الاصطناعي، وعلى بناء الحجة لاستخدامه في خدمة عامة على أساس القيمة العامة. يقيّم المشاركون الخيارات المتاحة لمشكلة سياسات واحدة، من الإرشادات والمعايير إلى المشتريات والتمويل والبيئات التجريبية التنظيمية والحوسبة المشتركة؛ ويبنون دراسة قيمة عامة لمساعد يتعامل مع المواطنين؛ ويختبرونه على مجموعة حالات ثابتة بالعربية والإنجليزية باستخدام نماذج مستضافة؛ ثم يجمعون حزمة المساءلة التي يستحقها الجمهور. تُتناول حالات الاستخدام القطاعية في المقرر USE-SEC-203، وشروط العقود في المقرر LDS-EXE-205.
 
@@ -30,10 +30,10 @@ REPLACE: سطر واحد تحت العنوان: ما يستطيع المشارك
 
 | الوحدة | العنوان | الجلسات | الشرائح |
 |---|---|---|---|
-| اليوم 1 | REPLACE: موضوع هذه الوحدة في كلمات قليلة | REPLACE: عنوان الجلسة 1; REPLACE: عنوان الجلسة 2; REPLACE: عنوان الجلسة 3; REPLACE: عنوان الجلسة 4 | [`slides/day1.html`](slides/day1.html) |
-| اليوم 2 | REPLACE: موضوع هذه الوحدة في كلمات قليلة | REPLACE: عنوان الجلسة 1; REPLACE: عنوان الجلسة 2; REPLACE: عنوان الجلسة 3; REPLACE: عنوان الجلسة 4 | [`slides/day2.html`](slides/day2.html) |
-| اليوم 3 | REPLACE: موضوع هذه الوحدة في كلمات قليلة | REPLACE: عنوان الجلسة 1; REPLACE: عنوان الجلسة 2; REPLACE: عنوان الجلسة 3; REPLACE: عنوان الجلسة 4 | [`slides/day3.html`](slides/day3.html) |
-| المشروع الختامي | عروض المشروع الختامي |  | [`slides/capstone.html`](slides/capstone.html) |
+| اليوم 1 | أدوار الدولة وأدواتها والقيمة العامة | خمسة أدوار للدولة في الذكاء الاصطناعي; ثماني أدوات ومفاضلتها; المشتريات أداةً للسياسة; القيمة العامة لا العائد الخاص | [`slides/day1.html`](slides/day1.html) |
+| اليوم 2 | من دراسة القيمة إلى قرار الاختبار | التكاليف والمنافع وتوزيعها; نتائج الخدمة، ومتى لا نؤتمت قرارًا عامًا; اختبار مساعد يكلّم المواطنين; القرار: إطلاق أو إصلاح أو إيقاف | [`slides/day2.html`](slides/day2.html) |
+| اليوم 3 | المساءلة أمام الجمهور وقدرات الخدمة المدنية | سجل الأنظمة وسجل الشفافية; تقييم الأثر والمراجعة المستقلة; المراجعة البشرية والتظلم وجبر الضرر; قدرات الخدمة المدنية والإحاطة الوزارية | [`slides/day3.html`](slides/day3.html) |
+| المشروع الختامي | الدفاع أمام لجنة وزارية صورية |  | [`slides/capstone.html`](slides/capstone.html) |
 <!-- /academy:units -->
 
 ## دراسة الحالة
@@ -47,18 +47,18 @@ REPLACE: سطر واحد تحت العنوان: ما يستطيع المشارك
 
 | | الجلسة | المختبر | الملف |
 |---|---|---|---|
-| 1.1 | اليوم 1 · الجلسة 1 | REPLACE: ما يبنيه المشاركون في المختبر 1.1 | [`D1_1.html`](labs/D1_1.html) |
-| 1.2 | اليوم 1 · الجلسة 2 | REPLACE: ما يبنيه المشاركون في المختبر 1.2 | [`D1_2.html`](labs/D1_2.html) |
-| 1.3 | اليوم 1 · الجلسة 3 | REPLACE: ما يبنيه المشاركون في المختبر 1.3 | [`D1_3.html`](labs/D1_3.html) |
-| 1.4 | اليوم 1 · الجلسة 4 | REPLACE: ما يبنيه المشاركون في المختبر 1.4 | [`D1_4.html`](labs/D1_4.html) |
-| 2.1 | اليوم 2 · الجلسة 1 | REPLACE: ما يبنيه المشاركون في المختبر 2.1 | [`D2_1.html`](labs/D2_1.html) |
-| 2.2 | اليوم 2 · الجلسة 2 | REPLACE: ما يبنيه المشاركون في المختبر 2.2 | [`D2_2.html`](labs/D2_2.html) |
-| 2.3 | اليوم 2 · الجلسة 3 | REPLACE: ما يبنيه المشاركون في المختبر 2.3 | [`D2_3.html`](labs/D2_3.html) |
-| 2.4 | اليوم 2 · الجلسة 4 | REPLACE: ما يبنيه المشاركون في المختبر 2.4 | [`D2_4.html`](labs/D2_4.html) |
-| 3.1 | اليوم 3 · الجلسة 1 | REPLACE: ما يبنيه المشاركون في المختبر 3.1 | [`D3_1.html`](labs/D3_1.html) |
-| 3.2 | اليوم 3 · الجلسة 2 | REPLACE: ما يبنيه المشاركون في المختبر 3.2 | [`D3_2.html`](labs/D3_2.html) |
-| 3.3 | اليوم 3 · الجلسة 3 | REPLACE: ما يبنيه المشاركون في المختبر 3.3 | [`D3_3.html`](labs/D3_3.html) |
-| 3.4 | اليوم 3 · الجلسة 4 | REPLACE: ما يبنيه المشاركون في المختبر 3.4 | [`D3_4.html`](labs/D3_4.html) |
+| 1.1 | اليوم 1 · الجلسة 1 | خريطة الأدوار وتعارضها | [`D1_1_state_roles.html`](labs/D1_1_state_roles.html) |
+| 1.2 | اليوم 1 · الجلسة 2 | تقييم خيارات الأدوات | [`D1_2_instruments.html`](labs/D1_2_instruments.html) |
+| 1.3 | اليوم 1 · الجلسة 3 | تكلفة خمس سنوات وشرط الاختبار | [`D1_3_procurement_cost.html`](labs/D1_3_procurement_cost.html) |
+| 1.4 | اليوم 1 · الجلسة 4 | فرز المنافع المدعاة | [`D1_4_public_value.html`](labs/D1_4_public_value.html) |
+| 2.1 | اليوم 2 · الجلسة 1 | دراسة القيمة العامة | [`D2_1_value_case.html`](labs/D2_1_value_case.html) |
+| 2.2 | اليوم 2 · الجلسة 2 | حدود الأتمتة ومقاييس النتائج | [`D2_2_automation_limits.html`](labs/D2_2_automation_limits.html) |
+| 2.3 | اليوم 2 · الجلسة 3 | اختبار ثنائي اللغة بإعدادين | [`D2_3_bilingual_test.html`](labs/D2_3_bilingual_test.html) |
+| 2.4 | اليوم 2 · الجلسة 4 | تقرير الاختبار وقراره | [`D2_4_test_report.html`](labs/D2_4_test_report.html) |
+| 3.1 | اليوم 3 · الجلسة 1 | قيد السجل وسجل الشفافية | [`D3_1_inventory_record.html`](labs/D3_1_inventory_record.html) |
+| 3.2 | اليوم 3 · الجلسة 2 | سجل المخاطر وتقييم الأثر | [`D3_2_impact_assessment.html`](labs/D3_2_impact_assessment.html) |
+| 3.3 | اليوم 3 · الجلسة 3 | الخطر والضابط والمالك وطريق التظلم | [`D3_3_review_appeal.html`](labs/D3_3_review_appeal.html) |
+| 3.4 | اليوم 3 · الجلسة 4 | خطة الكفاءات لوزارة افتراضية | [`D3_4_competence_plan.html`](labs/D3_4_competence_plan.html) |
 <!-- /academy:labs -->
 
 ## المشروع الختامي
@@ -79,13 +79,32 @@ REPLACE: سطر واحد تحت العنوان: ما يستطيع المشارك
 كل سطر قدرة، والأمثلة قابلة للتبديل.
 
 - **نموذج مستضاف عبر واجهة برمجة تطبيقات (API) قياسية للمحادثة:** نموذج مستضاف مفتوح الأوزان, أي واجهة برمجة تطبيقات تجارية للنماذج
-- **إطار اختبار لمجموعة حالات ثابتة:** promptfoo, ورقة اختبار مؤتمتة في جدول بيانات
+- **إطار اختبار لمجموعة حالات ثابتة:** promptfoo, ورقة اختبار مؤتمتة في جدول بيانات, برنامج الاختبار المرفق بالمقرر (labs/testing/run_tests.py)
 <!-- /academy:tools -->
 
 <!-- academy:sources -->
 ## المصادر
 
-- REPLACE: كل مصدر يستشهد به المقرر مع عنوانه، في course.json ضمن "sources"؛ هذه القائمة تُكتب من هناك
+### المرجعيات الوطنية
+
+- [الاستراتيجية الوطنية للبيانات والذكاء الاصطناعي (سدايا)](https://sdaia.gov.sa/ar/SDAIA/SdaiaStrategies/Pages/NationalStrategyForDataAndAI.aspx)
+- [مبادئ أخلاقيات الذكاء الاصطناعي (سدايا)](https://sdaia.gov.sa/ar/SDAIA/about/Documents/ai-principles.pdf)
+- [مبادئ الذكاء الاصطناعي التوليدي للجهات الحكومية (سدايا، 2025)](https://sdaia.gov.sa/ar/SDAIA/about/Files/GenAIGuidelinesForGovernmentARCompressed.pdf)
+- [Generative Artificial Intelligence Guidelines for Government (النسخة الإنجليزية)](https://sdaia.gov.sa/en/SDAIA/about/Files/GenAIGuidelinesForGovernmentENCompressed.pdf)
+- [الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي (سدايا، SDAIA-P145، أبريل 2026)](https://sdaia.gov.sa/ar/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryAr.pdf)
+- [National AI Risk Management Framework, Executive Summary (SDAIA-P145EN)](https://sdaia.gov.sa/en/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryEn.pdf)
+- [سياسة مشاركة البيانات (مكتب إدارة البيانات الوطنية)](https://sdaia.gov.sa/ar/SDAIA/about/Documents/DataSharingPolicyAR.pdf)
+- [سياسة البيانات المفتوحة (مكتب إدارة البيانات الوطنية)](https://sdaia.gov.sa/ar/SDAIA/about/Documents/OpenDataPolicyAr.pdf)
+- [سياسة تصنيف البيانات (مكتب إدارة البيانات الوطنية)](https://sdaia.gov.sa/ar/SDAIA/about/Documents/DataClassificationPolicyAr.pdf)
+- [نظام المنافسات والمشتريات الحكومية (1448هـ)، جريدة أم القرى، نُشر في 4 سبتمبر 2026](https://www.uqn.gov.sa/decisions-and-regulations/4001762)
+- [إطار المعايير المهنية في البيانات والذكاء الاصطناعي (سدايا، النسخة الثانية، سبتمبر 2026)](https://sdaia.gov.sa/ar/MediaCenter/KnowledgeCenter/ResearchLibrary/DataAIOccupationalStandardsFramework.pdf)
+- [Data and AI Occupational Standards Framework (النسخة الإنجليزية)](https://sdaia.gov.sa/en/MediaCenter/KnowledgeCenter/ResearchLibrary/DataAIOccupationalStandardsFramework.pdf)
+
+### أمثلة حكومية من خارج المملكة (تُحدَّث كل دورة)
+
+- [HM Treasury: The Green Book (2026), sections 2.5 and 7.1 to 7.3](https://www.gov.uk/government/publications/the-green-book-appraisal-and-evaluation-in-central-government/the-green-book-2020)
+- [UK Government: Algorithmic Transparency Recording Standard Hub (updated 8 May 2025)](https://www.gov.uk/government/collections/algorithmic-transparency-recording-standard-hub)
+- [Government of Canada: Directive on Automated Decision-Making (modified 24 June 2025)](https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=32592)
 <!-- /academy:sources -->
 
 ### المرجعيات الوطنية

@@ -1,0 +1,4 @@
+option,description,build_cost_sar,annual_cost_sar,exit_cost_sar,local_content_pct,independent_test_offered
+X,ترخيص منصة بتسعير لكل محادثة,200000,1600000,900000,15,no
+Y,بناء على منصة مفتوحة يملك عقدها مزود محلي,1200000,650000,200000,55,yes
+Z,تطوير داخلي مع مزود تشغيل,2600000,450000,100000,70,yes
