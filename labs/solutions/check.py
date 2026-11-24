@@ -150,7 +150,22 @@ def lab_2_1():
                     r['value'] = '0.8'
                 w.writerow(r)
         o2, _ = VC.compute('grant', p)
+        # the stretch: the incomplete_reduction that brings the ratio to 1
+        lo_, hi_ = 0.25, 1.0
+        for _ in range(40):
+            mid = (lo_ + hi_) / 2
+            with open(p, 'w', encoding='utf-8', newline='') as f:
+                w = csv.DictWriter(f, fieldnames=rows[0].keys())
+                w.writeheader()
+                for r in rows:
+                    r = dict(r)
+                    if r['key'] == 'incomplete_reduction':
+                        r['value'] = str(mid)
+                    w.writerow(r)
+            o3, _ = VC.compute('grant', p)
+            lo_, hi_ = (mid, hi_) if o3['bcr'] < 1 else (lo_, mid)
     print(f'  with quality_en 0.8: benefits {o2["benefits_per_year"]:,.0f}, npv {o2["npv_public_value"]:,.0f}')
+    print(f'  stretch: incomplete_reduction {hi_:.3f} gives a ratio of 1')
 
 
 def lab_2_2():

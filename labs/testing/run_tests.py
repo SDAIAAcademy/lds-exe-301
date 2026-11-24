@@ -12,7 +12,8 @@ every answer with the written rules (labs/files/d2/pass_rules.txt), not with a m
 
 A hosted model is called through a standard chat-completions endpoint when LLM_BASE_URL,
 LLM_API_KEY and MODEL_A / MODEL_B (MODEL_C, else MODEL_B) are set. Only the published service
-guide and the synthetic question are sent. Without them, or when a call fails, the case is taken
+guide and the synthetic question are sent. Put the values in labs/testing/.env (copy
+.env.example) or set them in the shell. Without them, or when a call fails, the case is taken
 from labs/testing/recorded/, a scripted stand-in written by the course (not model output), and
 the source column says so. Nothing is downloaded and no model runs on this computer.
 """
@@ -93,6 +94,20 @@ def score(case, key, output):
     return True, '', False
 
 
+def load_env():
+    """Reads labs/testing/.env (copied from .env.example) when it exists. A variable already set
+    in the shell wins over the file."""
+    f = LABS / 'testing' / '.env'
+    if not f.exists():
+        return
+    for line in f.read_text(encoding='utf-8').splitlines():
+        line = line.strip()
+        if line and not line.startswith('#') and '=' in line:
+            k, v = line.split('=', 1)
+            if v.strip() and not os.environ.get(k.strip()):
+                os.environ[k.strip()] = v.strip().strip('"').strip("'")
+
+
 def call_model(cfg, question):
     base, keyv = os.environ.get('LLM_BASE_URL'), os.environ.get('LLM_API_KEY')
     model = os.environ.get('MODEL_' + cfg.upper()) or (os.environ.get('MODEL_B') if cfg == 'c' else None)
@@ -171,6 +186,7 @@ def main():
     ap.add_argument('--case', help='print one case in full')
     ap.add_argument('--no-save', action='store_true')
     a = ap.parse_args()
+    load_env()
     rows, rec = evaluate(a.config, recorded_only=a.recorded)
     if a.case:
         r = next((r for r in rows if r['case_id'] == a.case), None)

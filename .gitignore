@@ -34,3 +34,6 @@ __pycache__/
 .DS_Store
 Thumbs.db
 /*.log
+
+# Run records the test runner writes during a lab (participants keep their own)
+labs/testing/runs/
