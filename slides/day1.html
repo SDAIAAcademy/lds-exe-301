@@ -15,10 +15,10 @@
       <li><code>uv</code> مثبّت: يشغّل برنامجي الاختبار والحاسبة دون تثبيت آخر</li>
       <li>من لديه حساب لدى مزود نماذج مستضافة: العنوان والمفتاح واسم نموذج، في <code>labs/testing/.env</code> المنسوخ من <code>.env.example</code>، وهو لا يدخل المستودع</li>
     </ul>
-    <pre class="code" data-file="الطرفية"><code>uv run labs/testing/run_tests.py a --recorded --no-save
-uv run labs/tools/value_case.py</code></pre>
+    <pre class="code" data-file="الطرفية"><code>uv run labs/testing/run_tests.py --help
+uv run labs/tools/value_case.py --help</code></pre>
   </div>
-  <div class="callout tip mt"><b>علامة النجاح:</b> يطبع الأمر الأول سطر <code>decision by the course rule</code>، ويطبع الثاني جدول القيمة.</div>
+  <div class="callout tip mt"><b>علامة النجاح:</b> يطبع كل أمر سطرًا يبدأ بـ<code>usage</code>. لا تشغّلهما على الحالة قبل المختبرات.</div>
   <aside class="notes"><p>هذا من العمل التحضيري. من لم ينجح عنده الأمر يعمل اليوم دونه: مختبرات اليوم 1 جداول وملفات نصية، والبرنامجان يلزمان من اليوم 2. أصلح المشكلات في الاستراحة الأولى. الخطأ الأشهر: تشغيل الأمر من داخل مجلد <code>labs</code> لا من جذر المستودع.</p></aside>
 </section>
 
@@ -115,7 +115,7 @@ uv run labs/tools/value_case.py</code></pre>
       <div class="opt" data-why="يكشف التعارض للناس، لكن من يعتمد النتائج يبقى من شغّل التطبيق">نشر بيان بأن الوزارة تشغّل تطبيقًا وتكتب المعيار</div>
       <div class="opt" data-ok>اعتماد النتائج من وحدة لا تتبع التشغيل، بمعيار واحد للجميع</div>
       <div class="opt" data-why="يزيد ما يُختبر به تطبيق الوزارة، ولا يغيّر من يعتمد نتائجه">اختبار تطبيق الوزارة بعدد أكبر من الحالات قبل كل إصدار جديد</div>
-      <div class="opt" data-why="يعطي القاعدة الأشد لغير الوزارة، فيعمّق التعارض بدل أن يعالجه">إعفاء تطبيق الوزارة من المعيار لأنها جهة حكومية لها رقابتها</div>
+      <div class="opt" data-why="يعطي القاعدة الأشد لغير الوزارة، فيعمّق التعارض بدل أن يعالجه">إعفاء تطبيق الوزارة من المعيار، لأن رقابتها الداخلية تكفي</div>
     </div>
     <div class="callout tip why"><b>لماذا.</b> التعارض في من يعتمد النتائج؛ نقل الاعتماد إلى وحدة مستقلة وتطبيق المعيار نفسه يزيلانه.</div>
   </div>
@@ -459,6 +459,6 @@ uv run labs/tools/value_case.py</code></pre>
 <section class="slide dark" id="next">
   <div class="kicker">غدًا</div>
   <h2>دراسة القيمة العامة، ثم اختبار المساعد باللغتين</h2>
-  <p class="lead">أحضر تصنيفك من المختبر 1.4 ونتائجك الثلاث، وتأكد أن <code>uv run labs/testing/run_tests.py a --recorded --no-save</code> يعمل على جهازك.</p>
+  <p class="lead">أحضر تصنيفك من المختبر 1.4 ونتائجك الثلاث، وتأكد أن <code>uv run labs/testing/run_tests.py --help</code> يعمل على جهازك.</p>
   <aside class="notes"><p>من لم يُنهِ المختبر 1.4 يبدأ غدًا من الملفات المقدمة: لا يعتمد أي مختبر في اليوم 2 على نتيجته.</p></aside>
 </section>
