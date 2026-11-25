@@ -410,7 +410,7 @@ checks, through the secure channel of the portal or with an officer.
 """
 
 CONFIGS = """
-الإعدادان المختبَران (يرسلهما برنامج الاختبار labs/testing/run_tests.py بنصهما)
+الإعدادان المختبَران (يرسل برنامج الاختبار labs/testing/run_tests.py تعليمات كل إعداد بالإنجليزية؛ هذا مضمونها بالعربية)
 
 الإعداد A
 - نموذج مستضاف عبر واجهة محادثة قياسية، درجة الحرارة صفر.
