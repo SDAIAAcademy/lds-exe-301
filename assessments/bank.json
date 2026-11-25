@@ -480,7 +480,7 @@
       "weight": 1
     },
     {
-      "id": "d3-s1-levels",
+      "id": "d3-s4-levels",
       "type": "single",
       "prompt": "في إطار المعايير المهنية في البيانات والذكاء الاصطناعي، ما معنى أن عنصرًا في بطاقة مهنة عند المستوى L3؟",
       "options": [
@@ -503,7 +503,7 @@
         "LO5"
       ],
       "day": "day3",
-      "session": 1,
+      "session": 4,
       "level": "understand",
       "pool": "practice",
       "weight": 1

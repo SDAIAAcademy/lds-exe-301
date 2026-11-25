@@ -105,7 +105,7 @@ AI in Public Policy and Public Service Delivery
 
 **الحاسبة.** يحسب `labs/tools/value_case.py` التكاليف والمنافع على خمس سنوات بمعدل خصم 4% (فرضية المقرر)، ويفصل القيمة العامة عن الوفر المالي، ويطبع جدول التوزيع بحسب الفئة واللغة. كل فرضية في ملف قابل للتعديل.
 
-**قواعد من وضع المقرر.** دليل تقدير الأدوات وحدوده، وقاعدة القرار (إطلاق أو إصلاح أو إيقاف) وعتباتها، وقواعد التصحيح وأنواع الإخفاق، ومستويات الأتمتة الأربعة، وقواعد الوزارة في قبول المخاطر وملكيتها، وقيمة ساعة المتقدم ومعدل الخصم: أدوات المقرر للتمرين، لا معايير وطنية. شرط الاختبار المستقل قبل الاستلام ممارسة تضعها الجهة في كراستها، لا نص في نظام المنافسات.
+**قواعد من وضع المقرر.** دليل تقدير الأدوات وحدوده، وقاعدة القرار (إطلاق أو إصلاح أو إيقاف) وعتباتها، وقواعد التصحيح وأنواع الإخفاق، ومستويات الأتمتة الأربعة، وقواعد الوزارة في قبول المخاطر وملكيتها، وقالب القيد بحقوله الثلاثة عشر، وقيمة ساعة المتقدم ومعدل الخصم، ومعايير سلم تقدير الحزمة وأوزانها، وسلم المناقشة بأجزائه الثلاثة، وتوزيع درجة المختبرات المقيَّمة، وقراءة شرط 60% على الحزمة: أدوات المقرر وقراراته، لا معايير وطنية ولا نص البطاقة. شرط الاختبار المستقل قبل الاستلام ممارسة تضعها الجهة في كراستها، لا نص في نظام المنافسات.
 
 **المقررات المجاورة.** LDS-EXE-201 متطلب سابق، ولا يُعاد تدريس المحفظة ودراسات الجدوى. تفاصيل الشراء والعقود ومجموعة الاختبار المختومة في LDS-EXE-205، وحالات الاستخدام القطاعية في USE-SEC-203.
 
@@ -165,7 +165,7 @@ AI in Public Policy and Public Service Delivery
 
 ### أمثلة حكومية من خارج المملكة (تُحدَّث كل دورة)
 
-- [HM Treasury: The Green Book (2026), sections 2.5 and 7.1 to 7.3](https://www.gov.uk/government/publications/the-green-book-appraisal-and-evaluation-in-central-government/the-green-book-2020)
+- [HM Treasury: The Green Book (2026): social value and chapter 7, distributional analysis](https://www.gov.uk/government/publications/the-green-book--2/the-green-book-2026)
 - [UK Government: Algorithmic Transparency Recording Standard Hub (updated 8 May 2025)](https://www.gov.uk/government/collections/algorithmic-transparency-recording-standard-hub)
 - [Government of Canada: Directive on Automated Decision-Making (modified 24 June 2025)](https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=32592)
 <!-- /academy:sources -->

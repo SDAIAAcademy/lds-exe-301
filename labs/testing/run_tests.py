@@ -53,7 +53,8 @@ def system_prompt(cfg):
         guide = (D2 / 'service_guide_ar.txt').read_text(encoding='utf-8') + '\n' + (D2 / 'service_guide_en.txt').read_text(encoding='utf-8')
         return RULES + '\n\n' + guide
     guide = (CAP / 'carers_brief.txt').read_text(encoding='utf-8')
-    return RULES.replace('Home Adaptation Grant', "Carer's Allowance") + '\n\n' + guide
+    return ("You are the assistant of the Ministry of Care and Enablement for the Carer's Allowance. "
+            + RULES + '\n\n' + guide)
 
 
 def is_arabic(text):
