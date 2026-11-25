@@ -1,0 +1,11 @@
+measure,value,note
+enrolled,600,المسجلون في برنامج «التوعية بالذكاء الاصطناعي» في 2025
+completed,540,من أتموا البرنامج
+satisfaction_out_of_5,4.6,متوسط رضا المتدربين
+quiz_pass_pct,82,نسبة النجاح في اختبار نهاية البرنامج
+wrong_info_complaints_per_1000_before,2.6,شكاوى المعلومات الخاطئة لكل ألف تواصل، الربع السابق للبرنامج
+wrong_info_complaints_per_1000_after,2.5,الربع اللاحق للبرنامج
+repeat_contact_pct_before,20.1,نسبة التواصل المتكرر قبل البرنامج
+repeat_contact_pct_after,20.4,بعده
+audit_sample_drafts_checked_ok_pct_before,61,نسبة خطابات الاستيفاء المقترحة آليًا التي راجعها الموظف مراجعة صحيحة (عينة تدقيق 200)
+audit_sample_drafts_checked_ok_pct_after,63,بعده (عينة 200)

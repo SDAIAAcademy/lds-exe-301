@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 2.2 · حدود الأتمتة ومقاييس النتائج · الذكاء الاصطناعي في السياسات العامة وتقديم الخدمات العامة</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D2_2_automation_limits.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day2.html#lab-2-2">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 2.2</span>
+<h1>حدود الأتمتة ومقاييس النتائج</h1>
+<p>تضع نقاط القرار الاثنتي عشرة في أربعة مستويات بسبب لكل منها، وتختار ثلاثة مقاييس نتائج وتحسب خط أساس كل منها</p>
+<div class="meta"><span>35 دقيقة</span><span>اليوم 2</span><span>الجلسة 2: نتائج الخدمة، ومتى لا نؤتمت قرارًا عامًا</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="2.2">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <ul>
+      <li>نقاط القرار الاثنتا عشرة في خدمة المنحة، كل منها في مستوى من أربعة، بسبب من سطر.</li>
+      <li>ثلاثة مقاييس نتائج، لكل منها خط أساس من بيانات الخدمة، ومن يتابعه ومتى.</li>
+    </ul>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/d2/journey_points.csv" target="_blank"><b>d2/journey_points.csv</b><span>نقاط القرار الاثنتا عشرة، بعمودين فارغين</span></a>
+    <a href="files/d2/candidate_measures.csv" target="_blank"><b>d2/candidate_measures.csv</b><span>عشرة مقاييس مقترحة</span></a>
+    <a href="files/d2/enquiries_monthly.csv" target="_blank"><b>d2/enquiries_monthly.csv</b><span>التواصل الشهري</span></a>
+    <a href="files/d2/decisions_monthly.csv" target="_blank"><b>d2/decisions_monthly.csv</b><span>الطلبات والقرارات الشهرية</span></a>
+    <a href="files/d2/service_guide_ar.txt" target="_blank"><b>d2/service_guide_ar.txt</b><span>دليل الخدمة</span></a>
+  </div>
+  <p class="small">جدول بيانات بجدول محوري أو دوال تجميع. سياسة الذكاء الاصطناعي: مساعد مرشد على الملفات العامة؛ يجوز أن تطلب منه صيغة الجدول المحوري، لا أن يضع النقاط في مستوياتها.</p>
+
+  <h2>الخطوات</h2>
+
+  <div class="step">
+    <h3>1 · اقرأ المستويات الأربعة ونقاط القرار <span class="min">4 د</span></h3>
+    <ul>
+      <li><code>answer</code>: يجيب المساعد وحده، من الدليل المنشور</li>
+      <li><code>draft</code>: يعدّ المساعد مسودة أو اقتراحًا، ويعتمده موظف قبل أن يصل إلى المتقدم أو يؤثر فيه</li>
+      <li><code>human</code>: يقرر موظف وحده، ولا يقترح المساعد قرارًا</li>
+      <li><code>refer</code>: يحيل المساعد فورًا إلى موظف، دون أن يجيب في المضمون</li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <h3>2 · ضع كل نقطة في مستوى، مع سبب من سطر <span class="min">12 د</span></h3>
+    <p>اسأل لكل نقطة: هل فيها قرار يمس حق المتقدم أو ماله؟ هل فيها خطر على سلامة أحد؟ هل يكفي فيها الدليل المنشور؟ هل يرى المتقدم الناتج قبل أن يراجعه موظف؟</p>
+  </div>
+
+  <div class="step">
+    <h3>3 · صنّف المقاييس العشرة: نتيجة أم تبنٍّ <span class="min">5 د</span></h3>
+    <p>المقياس نتيجة إذا قال شيئًا عن حال المتقدم أو عن جودة القرار. وهو تبنٍّ إذا قال إن الناس استعملوا الأداة.</p>
+  </div>
+
+  <div class="step">
+    <h3>4 · اختر ثلاثة مقاييس نتائج، واحسب خط أساس كل منها <span class="min">10 د</span></h3>
+    <p>من بيانات 2025 في الملفين الشهريين. احسب بحسب اللغة على الأقل، وبحسب الفئة أو المنطقة إن سمح الوقت. النسبة تُحسب من المجاميع (مجموع الناقص ÷ مجموع الطلبات)، لا متوسطًا للنسب الشهرية.</p>
+    <table>
+      <tr><th>المقياس</th><th>العربية</th><th>الإنجليزية</th></tr>
+      <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+  </div>
+
+  <div class="step">
+    <h3>5 · اكتب لكل مقياس من يتابعه ومتى <span class="min">4 د</span></h3>
+    <p>منصب في الوزارة (لا اسم شخص ولا المزوّد)، وتواتر القياس، والرقم الذي إن بلغه المقياس رُفع الأمر إلى مالك الخدمة.</p>
+  </div>
+
+  <div class="step stretch">
+    <h3>✱ إضافي</h3>
+    <p>اكتب ما يلزم كي تنتقل النقطة J03 إلى مستوى «يجيب المساعد»، أو لماذا لا تنتقل.</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>هل وضعت نقطة فيها رفض أو مال في مستوى غير <code>human</code>؟ لماذا؟</li>
+    <li>كم مقياسًا من العشرة تبنٍّ؟</li>
+    <li>هل يظهر في خطوط أساسك فرق بين اللغتين؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب: مفتاح المختبر</summary>
+    <ul>
+      <li><b>المستويات:</b> <code>answer</code>: J01 وJ02 وJ12. <code>draft</code>: J03 (فحص الاكتمال يعتمده موظف) وJ11 (ترتيب الأولوية اقتراح يعتمده المشرف). <code>human</code>: J04 وJ05 وJ06 وJ07. <code>refer</code>: J08 (الحالة لا تُعطى في المحادثة؛ الدليل G9: القناة الآمنة بعد التحقق من الهوية) وJ09 (خطر سقوط) وJ10 (ضيق شديد).</li>
+      <li><b>مقبول بسبب:</b> J08 في <code>human</code> إن قال المشارك إن موظفًا يبلغ الحالة بعد التحقق. J08 في <code>draft</code> غير مقبول: المساعد لا يطّلع على ملف المتقدم. J11 في <code>human</code> مقبول إن كانت الأولوية تمس حق متقدم على آخر. J03 في <code>human</code> مقبول أيضًا: «مُؤازِر» لا يطّلع على ملفات المتقدمين، فمستوى <code>draft</code> في J03 يعني أداة داخلية على أنظمة الوزارة معتمدة لتصنيف هذه البيانات، لا المساعد الذي يكلّم المواطنين؛ اطلب ممن اختار <code>draft</code> أن يقول ذلك. غير مقبول: J04 إلى J07 في <code>draft</code>؛ المسودة التي يقترح فيها المساعد قرار أهلية تصير قرارًا حين يعتمدها موظف مثقل.</li>
+      <li><b>المقاييس:</b> نتائج: M01 وM02 وM04 وM06 وM08 وM10. تبنٍّ: M03 وM05 وM07 وM09 (أربعة).</li>
+      <li><b>خطوط الأساس (2025):</b> الطلبات الناقصة 38.8% بالعربية و54.2% بالإنجليزية (40.2% للكل). وسيط الأيام حتى القرار 38.3 للكل (37.8 عربي، 43.9 إنجليزي؛ 34.7 حضري، 39.4 شبه حضري، 47.1 ريفي). انتظار الهاتف 7.2 دقيقة بالعربية و14.6 بالإنجليزية. المجاب في الوقت المستهدف 82.1% و63.8%. التواصل المتكرر 19.5% و28.2%. شكاوى المعلومات الخاطئة 2.1 و5.8 لكل ألف. الإلغاء في التظلم 15.4% لكبار السن، و19.0% لذوي الإعاقة، و28.1% لمقدّمي الرعاية.</li>
+      <li><b>الإضافي:</b> J03 لا تنتقل كاملة: فحص وجود المستند ممكن، أما الحكم على صلاحيته (تقرير طبي منتهٍ، موافقة مالك غير موقعة) فيُرد إلى موظف. يلزم على الأقل مجموعة حالات اختبار مكتوبة لهذه النقطة بالعربية والإنجليزية، وحق المتقدم في أن يطلب موظفًا.</li>
+      <li><b>فصل المهام:</b> من يشغّل المساعد لا يتابع مقاييس نتائجه وحده؛ المتابعة عند منصب لا يملك المساعد، ويُرفع ما يتجاوز الحد إلى مالك الخدمة.</li>
+      <li>التحقق: <code>uv run labs/solutions/check.py 2.2</code>.</li>
+    </ul>
+  </details>
+</article>
+<nav class="pager"><a href="D2_1_value_case.html" rel="prev">→ المختبر السابق</a><a href="D2_3_bilingual_test.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · الذكاء الاصطناعي في السياسات العامة وتقديم الخدمات العامة<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-25⁩ · الإيداع f2760bf</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-25T00:04:57Z","version":"2027.1.0","commit":"f2760bf"},"course":{"id":"lds-exe-301","code":"LDS-EXE-301","title":"الذكاء الاصطناعي في السياسات العامة وتقديم الخدمات العامة","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-exe-301/","repo":"SDAIAAcademy/lds-exe-301","home":"../index.html"},"lab":{"id":"2.2","title":"حدود الأتمتة ومقاييس النتائج","summary":"تضع نقاط القرار الاثنتي عشرة في أربعة مستويات بسبب لكل منها، وتختار ثلاثة مقاييس نتائج وتحسب خط أساس كل منها","minutes":35,"day":2,"unit":"اليوم 2","session":2,"deck":"../slides/day2.html#lab-2-2","prev":"D2_1_value_case.html","next":"D2_3_bilingual_test.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+instrument,reach,cost,speed,total
+regulation,5,3,4,12
+guidance,3,5,5,13
+standard,4,3,3,10
+procurement,2,4,2,8
+funding,2,2,4,8
+sandbox,4,4,4,12
+data_sharing,4,5,5,14
+shared_compute,3,2,2,7

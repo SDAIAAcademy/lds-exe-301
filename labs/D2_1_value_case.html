@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 2.1 · دراسة القيمة العامة · الذكاء الاصطناعي في السياسات العامة وتقديم الخدمات العامة</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D2_1_value_case.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day2.html#lab-2-1">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 2.1</span>
+<h1>دراسة القيمة العامة</h1>
+<p>تصحح مسودة دراسة القيمة، وتشغّل الحاسبة على بيانات الخدمة الاصطناعية، وتكتب جدول التكاليف والمنافع وجدول التوزيع</p>
+<div class="meta"><span>35 دقيقة</span><span>اليوم 2</span><span>الجلسة 1: التكاليف والمنافع وتوزيعها</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="2.1">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <ul>
+      <li>قائمة بأخطاء مسودة دراسة القيمة التي كتبها فريق المشروع.</li>
+      <li>جدول تكاليف ومنافع لـ«مُؤازِر» على خمس سنوات، فيه القيمة العامة والوفر المالي منفصلين.</li>
+      <li>جدول توزيع بحسب الفئة واللغة، والفئة الأقل انتفاعًا باسمها.</li>
+    </ul>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/d2/draft_value_case.txt" target="_blank"><b>d2/draft_value_case.txt</b><span>مسودة فريق المشروع</span></a>
+    <a href="files/d2/assumptions.csv" target="_blank"><b>d2/assumptions.csv</b><span>الفرضيات ومصدر كل منها</span></a>
+    <a href="files/d2/enquiries_monthly.csv" target="_blank"><b>d2/enquiries_monthly.csv</b><span>التواصل الشهري بحسب القناة واللغة والفئة</span></a>
+    <a href="files/d2/decisions_monthly.csv" target="_blank"><b>d2/decisions_monthly.csv</b><span>الطلبات والقرارات الشهرية</span></a>
+    <a href="tools/value_case.py" target="_blank"><b>tools/value_case.py</b><span>حاسبة القيمة العامة</span></a>
+  </div>
+  <p class="small">الحاسبة لا تحتاج إلا Python وuv، وتعمل على جهازك أو في Colab. من لا يشغّلها يأخذ مخرجاتها من المدرّب ويقرأها سطرًا سطرًا. سياسة الذكاء الاصطناعي: مساعد مرشد على الملفات العامة، يشرح الحساب ولا يكتب الجدول عنك.</p>
+
+  <h2>الخطوات</h2>
+
+  <div class="step">
+    <h3>1 · اقرأ المسودة، وجد ما يُعدّ مرتين أو ليس منفعة <span class="min">7 د</span></h3>
+    <p>اقرأ المنافع الأربع والتكاليف والخلاصة. لكل سطر اسأل: هل هذه منفعة للجمهور أم رقم استخدام؟ هل عُدّت الساعات نفسها في سطرين؟ هل يصير وقت الموظف نقدًا فعلًا؟ ما التكلفة التي غابت؟ اكتب كل خطأ في سطر.</p>
+  </div>
+
+  <div class="step">
+    <h3>2 · شغّل الحاسبة بالفرضيات المقدَّمة، واقرأ كل سطر <span class="min">6 د</span></h3>
+    <div class="prompt" data-tool="الطرفية">uv run labs/tools/value_case.py</div>
+    <p>لكل سطر في المخرجات جد الفرضية التي جاء منها في <code>assumptions.csv</code>. لاحظ <code>cash_release_share</code>: صفر، لأن الوزارة لن تلغي وظائف.</p>
+  </div>
+
+  <div class="step">
+    <h3>3 · اكتب جدول التكاليف والمنافع <span class="min">8 د</span></h3>
+    <p>جدولان من أعمدة قليلة. الأول للقيمة العامة: المنافع السنوية، وتكلفة التشغيل السنوية (المنصة وموظفا المراجعة)، والبناء، وصافي القيمة الحالية على خمس سنوات، ونسبة المنافع إلى التكاليف. الثاني للميزانية: ما يدخلها نقدًا وما يخرج منها.</p>
+    <table>
+      <tr><th>البند</th><th>القيمة العامة</th><th>الميزانية</th></tr>
+      <tr><td>المنافع في السنة</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>التشغيل في السنة</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>صافي القيمة الحالية</td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+  </div>
+
+  <div class="step">
+    <h3>4 · اكتب جدول التوزيع، وسمِّ الفئة الأقل انتفاعًا <span class="min">8 د</span></h3>
+    <p>من سطور التوزيع في المخرجات: ساعات الوفر لكل ألف تواصل، لكل فئة ولغة. أي فئة تنتفع أقل؟ لماذا، من بيانات القنوات (كم منها يستعمل البوابة)؟ اكتب جملة عما يلزم كي تنتفع.</p>
+  </div>
+
+  <div class="step">
+    <h3>5 · غيّر فرضية واحدة، واكتب أثرها في القرار <span class="min">6 د</span></h3>
+    <p>انسخ <code>assumptions.csv</code> وغيّر قيمة واحدة تشك فيها، ثم شغّل:</p>
+    <div class="prompt" data-tool="الطرفية">uv run labs/tools/value_case.py --assumptions <span class="ph">نسختك.csv</span></div>
+    <p>هل تغيّر الفرضية القرار، أم تغيّر الرقم وحده؟ اكتب ذلك في سطرين.</p>
+  </div>
+
+  <div class="step stretch">
+    <h3>✱ إضافي</h3>
+    <p>جد نسبة الطلبات الناقصة المتجنَّبة (<code>incomplete_reduction</code>) التي تجعل نسبة المنافع إلى التكاليف 1.</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>كم خطأ وجدت في المسودة، وأيها يرفع المنافع أكثر من غيره؟</li>
+    <li>هل نسبة المنافع إلى التكاليف فوق 1 أم دونها، وهل يغيّر ذلك ما ستكتبه للجنة؟</li>
+    <li>لماذا يختلف صافي القيمة العامة عن صافي الميزانية؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب: مفتاح المختبر</summary>
+    <ul>
+      <li><b>أخطاء المسودة:</b> (1) 40,000 محادثة × 25 ريالًا رقم تبنٍّ لا منفعة؛ (2) وقت الموظفين عُدّ نقدًا مع أن <code>cash_release_share</code> صفر؛ (3) الساعات نفسها (4,667) عُدّت مرتين؛ (4) الرضا 92% من مستخدمي المحادثة وحدهم؛ (5) غاب موظفا المراجعة (580,000 ريال في السنة)؛ (6) الصافي «السنوي» يتجاهل البناء والخصم؛ (7) «يستفيد الجميع بالتساوي» بلا جدول توزيع. منافع المسودة 2,493,334 ريالًا في السنة، والمعاد حسابها 973,518.</li>
+      <li><b>القيمة العامة:</b> منافع 973,518 في السنة، وتشغيل 1,230,000 (650,000 للمنصة و580,000 للمراجعة)، وبناء 1,200,000، ومعامل القيمة الحالية 4.451؛ صافي القيمة الحالية <span class="ltr">−2,341,813</span>، ونسبة المنافع إلى التكاليف 0.65. أيام القرار الموفّرة 30,450 في السنة.</li>
+      <li><b>الميزانية:</b> لا نقد يدخل، فالصافي <span class="ltr">−6,675,741</span>. القيمة العامة السالبة أيضًا لا تعني «لا تفعل»؛ تعني أن الحجة يجب أن تقوم على ما لا تعدّه الحاسبة، أو على تصميم أرخص.</li>
+      <li><b>التوزيع:</b> الأقل انتفاعًا كبار السن بالعربية، 32.2 ساعة لكل ألف تواصل (مقدّمو الرعاية بالإنجليزية 58.6). السبب: نحو 15% من تواصل كبار السن على البوابة، والمساعد يوفر أكثر ما يوفر على البوابة.</li>
+      <li><b>الخطوة 5، مثال:</b> <code>quality_en</code> = 0.8 (نتيجة الإنجليزية في اختبار اليوم) يخفض المنافع إلى 963,605 والصافي إلى <span class="ltr">−2,385,942</span>: يتغير الرقم ولا يتغير القرار.</li>
+      <li><b>الإضافي:</b> نحو 0.477، أي أن يتجنب المساعد قرابة نصف الطلبات الناقصة بدل ربعها.</li>
+      <li><b>فصل المهام:</b> فريق المشروع كتب المسودة، فلا يعتمد دراسة القيمة؛ يراجعها مكتب الوكيلة قبل أن تُرفع إلى اللجنة.</li>
+      <li>التحقق: <code>uv run labs/solutions/check.py 2.1</code>.</li>
+    </ul>
+  </details>
+</article>
+<nav class="pager"><a href="D1_4_public_value.html" rel="prev">→ المختبر السابق</a><a href="D2_2_automation_limits.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · الذكاء الاصطناعي في السياسات العامة وتقديم الخدمات العامة<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-25⁩ · الإيداع f2760bf</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-25T00:04:57Z","version":"2027.1.0","commit":"f2760bf"},"course":{"id":"lds-exe-301","code":"LDS-EXE-301","title":"الذكاء الاصطناعي في السياسات العامة وتقديم الخدمات العامة","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-exe-301/","repo":"SDAIAAcademy/lds-exe-301","home":"../index.html"},"lab":{"id":"2.1","title":"دراسة القيمة العامة","summary":"تصحح مسودة دراسة القيمة، وتشغّل الحاسبة على بيانات الخدمة الاصطناعية، وتكتب جدول التكاليف والمنافع وجدول التوزيع","minutes":35,"day":2,"unit":"اليوم 2","session":1,"deck":"../slides/day2.html#lab-2-1","prev":"D1_4_public_value.html","next":"D2_2_automation_limits.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>
